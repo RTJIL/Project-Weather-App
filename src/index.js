@@ -12,17 +12,19 @@ form.addEventListener('submit', async (e) => {
   const input = document.getElementById('location');
   const searchTerm = input.value.trim();
 
-  if (!weatherDataDiv.classList.contains('hidden')) {
-    weatherDataDiv.classList.add('hidden');
-  } else {
+  if (placeName.textContent !== null) {
     weatherDataDiv.classList.remove('hidden');
   }
 
-  let weatherData = await fetchWeatherData(searchTerm);
-
-  placeName.textContent = weatherData.address;
-  temperature.textContent = `${weatherData.days[0].temp} °C `;
-  extraInfo.textContent = `Feelslike: ${weatherData.days[0].feelslike}\n Solarradiation: ${weatherData.days[0].solarradiation}\n Conditions: ${weatherData.days[0].conditions}}`;
+  if (input.value !== null) {
+    let weatherData = await fetchWeatherData(searchTerm);
+    placeName.textContent = weatherData.address;
+    temperature.textContent = `${weatherData.days[0].temp} °C `;
+    extraInfo.textContent = `Feelslike: ${weatherData.days[0].feelslike}°C\n Solarradiation: ${weatherData.days[0].solarradiation}\n Conditions: ${weatherData.days[0].conditions}`;
+  } else {
+    weatherDataDiv.classList.remove('hidden');
+    placeName.textContent = 'Give your loco';
+  }
 });
 
 const go = 'dfsdf';
