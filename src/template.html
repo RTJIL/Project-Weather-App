@@ -13,9 +13,20 @@
   </head>
   <body>
     <div class="container">
-        <div class="content">
-            
+      <div class="content">
+        <div class="title">Weather App</div>
+        <form action="#" class="check-form">
+          <input type="text" id="location" placeholder="Your city, country" />
+          <button type="submit" check-weather>Check Weather</button>
+        </form>
+        <button class="fetchLoc">Geo locate</button>
+
+        <div class="weather-data hidden">
+          <div class="place-name"></div>
+          <div class="temperature"></div>
+          <div class="extra-info" style="white-space: pre-line;"></div>
         </div>
+      </div>
     </div>
   </body>
 </html>
