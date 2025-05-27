@@ -12,6 +12,7 @@ const weatherDataDiv = document.querySelector('.weather-data');
 const placeName = document.querySelector('.place-name');
 const temperature = document.querySelector('.temperature');
 const extraInfo = document.querySelector('.extra-info');
+const errorDisplay = form.querySelector('.error');
 
 const getLoc = document.querySelector('.get-loc');
 
@@ -47,6 +48,7 @@ form.addEventListener('submit', async (e) => {
 getLoc.addEventListener('click', async (e) => {
   e.preventDefault(); // prevent page reload
   const searchTerm = getLocation();
+  errorDisplay.classList.add('hidden');
 
   if (placeName.textContent !== null) {
     weatherDataDiv.classList.add('hidden');
