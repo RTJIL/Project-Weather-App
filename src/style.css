@@ -46,10 +46,6 @@ body {
   gap: 10px;
 }
 
-input {
-  text-align: center;
-}
-
 button,
 #location {
   border: none;
@@ -73,6 +69,7 @@ button:hover {
 
 #location {
   transition: box-shadow 200ms ease;
+  text-align: center;
 }
 
 #location:focus {
@@ -122,4 +119,19 @@ button:hover {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.input-error {
+  border: 2px solid red;
+}
+
+.input-success {
+  border: 2px solid green;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
