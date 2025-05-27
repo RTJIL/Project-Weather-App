@@ -19,12 +19,15 @@
           <input type="text" id="location" placeholder="Your city, country" />
           <button type="submit" check-weather>Check Weather</button>
         </form>
-        <button class="fetchLoc">Geo locate</button>
+        <button class="get-loc">Geo locate</button>
+
+        <div id="loading" class="hidden spinner"></div>
 
         <div class="weather-data hidden">
           <div class="place-name"></div>
           <div class="temperature"></div>
           <div class="extra-info" style="white-space: pre-line;"></div>
+          <div id="weather-icon"></div>
         </div>
       </div>
     </div>

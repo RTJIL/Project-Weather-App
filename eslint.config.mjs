@@ -11,7 +11,6 @@ export default defineConfig([
     rules: {
       semi: ['error', 'always'], // require semicolons
       quotes: ['error', 'single'], // use single quotes
-      indent: ['error', 2], // 2-space indentation
       eqeqeq: ['error', 'always'], // require ===
       curly: 'error', // enforce curly braces
       'no-console': 'off', // allow console.log
